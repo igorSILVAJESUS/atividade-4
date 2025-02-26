@@ -1,0 +1,43 @@
+str = input("Escreva uma frase: ")
+minusculo = str.lower()
+print(minusculo)
+
+
+
+
+
+frase = input("Digite uma frase: ")
+frase_com_reticencias = frase.replace(" ", "...")
+print(frase_com_reticencias)
+
+
+
+
+def dolares_para_float(d):
+
+    return float(d.replace('$', ''))
+valor = dolares_para_float("$50.00")
+print(valor)
+
+
+
+
+
+
+def dolares_para_float(d):
+
+    return float(d.replace('$', ''))
+
+def percentual_para_float(p):
+
+    return float(p.replace('%', '')) / 100
+
+valor_em_dolares = dolares_para_float("$10.50")
+percentual = percentual_para_float("15%")
+
+print(f"Valor em dólares: {valor_em_dolares}")
+print(f"Percentual: {percentual}")
+
+
+
+

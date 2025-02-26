@@ -1,0 +1,108 @@
+def verificar_par_impar():
+    valor = input("Informe um número: ")
+
+    try:
+        numero = int(valor)  # Tenta converter o valor para um inteiro
+        if numero % 2 == 0:
+            return True  # Número é par
+        else:
+            return False  # Número é ímpar
+    except ValueError:
+        return "Valor informado é inválido"  # Tratamento para valor não inteiro
+
+# Chama a função e imprime o resultado
+resultado = verificar_par_impar()
+print(resultado)
+
+
+
+def comentar_idade():
+    idade_input = input("Informe sua idade: ")
+
+    try:
+        idade = int(idade_input)  # Tenta converter a entrada para um inteiro
+        if idade < 0:
+            return "Valor informado é inválido."  # Idade não pode ser negativa
+        elif idade < 18:
+            return "Você é menor de idade."
+        elif 18 <= idade < 60:
+            return "Você é adulto."
+        else:
+            return "Você é idoso."
+    except ValueError:
+        return "Valor informado é inválido."  # Tratamento para valor não numérico
+
+# Chama a função e imprime o resultado
+resultado = comentar_idade()
+print(resultado)
+
+
+
+
+
+
+
+
+
+
+
+divisao = primeiro_numero / segundo_numero
+        print(f"Divisão: {primeiro_numero} /def calculadora():
+    # Solicita os dois números ao usuário
+    primeiro_numero = float(input("Informe o primeiro número: "))
+    segundo_numero = float(input("Informe o segundo número: "))
+
+    # Realiza as operações
+    soma = primeiro_numero + segundo_numero
+    subtracao = primeiro_numero - segundo_numero
+    multiplicacao = primeiro_numero * segundo_numero
+
+    # Verifica se o segundo número é zero para a divisão
+    if segundo_numero != 0: {segundo_numero} = {divisao}")
+    else:
+        print("Não é possível dividir por zero.")
+
+    # Imprime os resultados das operações
+    print(f"Soma: {primeiro_numero} + {segundo_numero} = {soma}")
+    print(f"Subtração: {primeiro_numero} - {segundo_numero} = {subtracao}")
+    print(f"Multiplicação: {primeiro_numero} * {segundo_numero} = {multiplicacao}")
+
+# Chama a função calculadora
+calculadora()
+
+
+
+
+
+
+def calculadora():
+    # Solicita a operação que o usuário deseja realizar
+    operacao = input("Escolha a operação (soma, subtração, multiplicação, divisão): ").strip().lower()
+
+    # Verifica se a operação é válida
+    if operacao not in ["soma", "subtração", "multiplicação", "divisão"]:
+        print("Opção inválida. Por favor, escolha uma operação válida.")
+        return
+
+    # Solicita os dois números ao usuário
+    primeiro_numero = float(input("Informe o primeiro número: "))
+    segundo_numero = float(input("Informe o segundo número: "))
+
+    # Realiza a operação escolhida
+    if operacao == "soma":
+        resultado = primeiro_numero + segundo_numero
+    elif operacao == "subtração":
+        resultado = primeiro_numero - segundo_numero
+    elif operacao == "multiplicação":
+        resultado = primeiro_numero * segundo_numero
+    elif operacao == "divisão":
+        if segundo_numero == 0:
+            print("Não é possível dividir por zero.")
+            return
+        resultado = primeiro_numero / segundo_numero
+
+    # Retorna o resultado
+    print(f"O resultado da {operacao} é: {resultado}")
+
+# Chama a função calculadora
+calculadora()
